@@ -1,7 +1,14 @@
 package gui;
 
+
 import javafx.event.ActionEvent;
 import javafx.scene.Scene;
+=======
+
+
+
+import javafx.event.ActionEvent;
+
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -12,6 +19,7 @@ import javafx.stage.Stage;
 public class MenuContainer {
 	private Stage stageInfo,primaryStage;
 	private Scene sceneInfo;
+	private Stage primaryStage;
 	private StackPane stackPane;
 	
 	public MenuContainer(Stage primaryStage){
@@ -35,24 +43,25 @@ public class MenuContainer {
 	}
 	
 	private void addButtons(){
-		Button buttonStart= new MyButton("Start", "Zacznij grê", "#b6e7c9").createButton();
+		Button buttonStart= new MyButton("Start", "Zacznij grÃª", "#b6e7c9").createButton();
 		buttonStart.setTranslateY(-50);
 		stackPane.getChildren().add(buttonStart);
 
-		Button buttonQuit=new MyButton("Zakoncz", "Zakoñcz grê", "#ff3f3f").createButton();
+		Button buttonQuit=new MyButton("Zakoncz", "ZakoÃ±cz grÃª", "#ff3f3f").createButton();
 		buttonQuit.setTranslateY(100);
 		stackPane.getChildren().add(buttonQuit);
 
 		buttonQuit.setOnAction((ActionEvent event) -> {
 			System.exit(1);
 		}); 
+		});
 		
-		Button buttonLoadGame=new MyButton("Wczytaj grê", "Wczytaj ostatni¹ grê", "#FFFF00").createButton();
+		Button buttonLoadGame=new MyButton("Wczytaj grÃª", "Wczytaj ostatniÂ¹ grÃª", "#FFFF00").createButton();
 		stackPane.getChildren().add(buttonLoadGame);
 		
 
 		
-		Button buttonInfo= new MyButton("Informacje", "Zobacz wiêcej informacji", "#FFFF00").createButton();
+		Button buttonInfo= new MyButton("Informacje", "Zobacz wiÃªcej informacji", "#FFFF00").createButton();
 		buttonInfo.setTranslateY(50);
 		stackPane.getChildren().add(buttonInfo);
 
