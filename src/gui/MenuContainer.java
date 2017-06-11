@@ -1,9 +1,7 @@
 package gui;
 
-
-
-
 import javafx.event.ActionEvent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -12,7 +10,8 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class MenuContainer {
-	private Stage primaryStage;
+	private Stage stageInfo,primaryStage;
+	private Scene sceneInfo;
 	private StackPane stackPane;
 	
 	public MenuContainer(Stage primaryStage){
@@ -46,7 +45,7 @@ public class MenuContainer {
 
 		buttonQuit.setOnAction((ActionEvent event) -> {
 			System.exit(1);
-		});
+		}); 
 		
 		Button buttonLoadGame=new MyButton("Wczytaj grê", "Wczytaj ostatni¹ grê", "#FFFF00").createButton();
 		stackPane.getChildren().add(buttonLoadGame);
@@ -57,8 +56,15 @@ public class MenuContainer {
 		buttonInfo.setTranslateY(50);
 		stackPane.getChildren().add(buttonInfo);
 
-		
-		
+		buttonInfo.setOnAction((ActionEvent event) -> {
+			InfoContainer stackPaneInfo=new InfoContainer();
+			sceneInfo = new Scene(stackPaneInfo.createContainer());
+			stageInfo = new Stage();
+			stageInfo.setScene(sceneInfo);
+			stageInfo.setResizable(false);
+			stageInfo.setTitle("Informacje");
+			stageInfo.show();
+		});
 
 	}
 	
