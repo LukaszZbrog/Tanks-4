@@ -14,13 +14,13 @@ public class InfoContainer {
 	public Parent createContainer() {
 		stackPaneInfo = new StackPane();
 
-		addBackground();
+		addImageBackground();
 		addText();
 		
 		return stackPaneInfo;
 	}
 	
-	private void addBackground(){
+	private void addImageBackground(){
 		Image imageBackgroud = new Image(getClass().getResourceAsStream("/tlo2.png"));
 		Label labelBackground = new Label();
 		labelBackground.setGraphic(new ImageView(imageBackgroud));
