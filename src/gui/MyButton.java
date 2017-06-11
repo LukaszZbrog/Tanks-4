@@ -19,5 +19,4 @@ public class MyButton extends Button {
 		button.setStyle("-fx-font: 22 arial; -fx-base: " + colorButton);
 		return button;
 	}	
-	
 }

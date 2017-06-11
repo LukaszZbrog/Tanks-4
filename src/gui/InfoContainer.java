@@ -14,6 +14,7 @@ public class InfoContainer {
 	public Parent createContainer() {
 		stackPaneInfo = new StackPane();
 
+
 		addImageBackground();
 		addText();
 		
